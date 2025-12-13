@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<robot name="rc_car" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="0.3 0.2 0.1"/>
+      </geometry>
+      <material name="blue">
+        <color rgba="0 0 0.8 1"/>
+      </material>
+    </visual>
+  </link>
+
+  <!-- LiDAR: 2.5in forward (0.064m), 4.5in right (-0.114m), 8-10in up (0.23m), rotated 180° -->
+  <link name="laser"/>
+  <joint name="laser_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="laser"/>
+    <origin xyz="0.064 -0.114 0.23" rpy="0 0 3.14159"/>
+  </joint>
+
+  <!-- Camera: 5.5in forward (0.14m), centered (0), 5.25in up (0.133m), right-side up -->
+  <link name="camera_link"/>
+  <joint name="camera_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="camera_link"/>
+    <origin xyz="0.14 0 0.133" rpy="0 0 0"/>
+  </joint>
+
+  <!-- IMU: 3.5in left (0.089m) -->
+  <link name="imu_link"/>
+  <joint name="imu_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="imu_link"/>
+    <origin xyz="0 0.089 0.05" rpy="0 0 0"/>
+  </joint>
+
+</robot>

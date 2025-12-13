@@ -1,0 +1,12 @@
+apriltag_ros:
+  ros__parameters:
+    image_transport: raw
+    family: 36h11
+    size: 0.1  # Tag size in meters (adjust to your actual tag size)
+    max_hamming: 0
+    detector:
+      threads: 4
+      decimate: 1.0
+      blur: 0.0
+      refine: true
+      debug: false

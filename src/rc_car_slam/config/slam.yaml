@@ -1,0 +1,37 @@
+slam_toolbox:
+  ros__parameters:
+    use_sim_time: false
+    solver_plugin: solver_plugins::CeresSolver
+
+    # Frames
+    map_frame: "map"
+    odom_frame: "odom"      # OK for now if you don't have odom TF
+    base_frame: "base_link"
+    use_sim_time: false
+
+    # Laser topic
+    scan_topic: "/scan"
+
+    # Mapping mode
+    mode: "mapping"
+    resolution: 0.03             # 3 cm grid for sharp maze walls
+    max_laser_range: 8.0         # set this to the real max range of your LiDAR
+
+    # When to insert scans into the map
+    linear_update: 0.1          # add scan every 5 cm of movement
+    angular_update: 0.1         # add scan every ~3 degrees of rotation
+    minimum_travel_distance: 0.1
+    minimum_travel_heading: 0.1
+
+    # Timing
+    minimum_time_interval: 0.1
+    transform_publish_period: 0.02
+    map_update_interval: 0.5     # update map twice per second
+
+    # Buffers for loop closure & smoothing
+    scan_buffer_size: 100
+    scan_buffer_maximum_scan_distance: 8.0
+
+    # Scan matching
+    use_scan_matching: false
+    debug_logging: false

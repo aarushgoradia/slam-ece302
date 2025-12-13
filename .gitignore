@@ -1,0 +1,19 @@
+# ROS2 colcon build output
+build/
+install/
+log/
+/pigpio
+tag_positions.json
+.lgd-nfy0
+
+# Python cache
+__pycache__/
+
+# VSCode settings
+.vscode/
+
+# Colcon metadata
+.colcon/
+
+# JetBrains IDEs
+.idea/
