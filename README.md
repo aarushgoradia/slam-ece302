@@ -1,12 +1,12 @@
 # Autonomous RC Car Navigation with SLAM
 
-An autonomous navigation system for RC cars using ROS2, Cartographer SLAM, LiDAR+IMU sensor fusion, and AprilTag waypoint navigation. This project demonstrates real-time mapping, localization, and path planning on resource-constrained embedded hardware.
+An autonomous navigation system for RC cars using ROS2, Cartographer SLAM, LiDAR+IMU sensor fusion, and AprilTag waypoint navigation. This project demonstrates real-time mapping, localization, and path planning on resource-constrained embedded hardware. This project is the final project for ECE302 at Princeton University
 
 ![RC Car Platform](car.png)
 
 ## Hardware
 
-- **Compute**: Raspberry Pi 5 (4GB RAM)
+- **Compute**: Raspberry Pi 5 (8GB RAM)
 - **LiDAR**: SLAMTEC A1 (360°, 6m range)
 - **IMU**: BNO055 (9-DOF)
 - **Camera**: Pi Camera v3 (AprilTag detection)
